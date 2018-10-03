@@ -1,6 +1,7 @@
 // Elie Bizimana
 // Created: 10/01/2018
 // Updated: 10/03/2018
+
 var numSquares = 6
 var colors = generateRandomColors(numSquares);
 var h1 = document.querySelector("h1")
@@ -27,7 +28,7 @@ easyBtn.addEventListener("click", function() {
   colorDisplay.textContent = pickedColor
   // show only three colors
   for (var i = 0; i < squares.length; i++) {
-    if(colors[i]){
+    if (colors[i]) {
       squares[i].style.backgroundColor = colors[i]
     } else {
       // hide the rest of the colors
@@ -55,19 +56,22 @@ hardBtn.addEventListener("click", function() {
   }
 })
 
-resetButton.addEventListener("click", function(){
+resetButton.addEventListener("click", function() {
   // generate random colors
   colors = generateRandomColors(numSquares)
   // pick a color to guess
   pickedColor = pickColor();
   // change the color Display
   colorDisplay.textContent = pickedColor;
+  messageDisplay.textContent = "";
+  this.textContent = "New Colors"
   // fill all the squares with colors
   for (var i = 0; i < squares.length; i++) {
     squares[i].style.backgroundColor = colors[i]
   }
-  h1.style.backgroundColor = "#232323"
+  h1.style.backgroundColor = "steelblue"
 })
+
 // A loop to change the squares design.
 for (var i = 0; i < squares.length; i++) {
   // Add initial colors to squares
@@ -102,11 +106,11 @@ function pickColor() {
   return colors[random]
 }
 
-function generateRandomColors(num){
+function generateRandomColors(num) {
   // make an array
   var arr = []
   // add num random colors to array
-  for(var i = 0; i < num; i++){
+  for (var i = 0; i < num; i++) {
     //get random color and push into arr
     arr.push(randomColor())
 
@@ -115,7 +119,7 @@ function generateRandomColors(num){
   return arr;
 }
 
-function randomColor(){
+function randomColor() {
   // pick a "red from 0 - 255"
   var r = Math.floor(Math.random() * 256)
   // pick a "green from 0 - 255"
