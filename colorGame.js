@@ -2,7 +2,7 @@
 // Created: 10/01/2018
 // Updated: 10/03/2018
 
-var numSquares = 6
+var numSquares = 3
 var colors = generateRandomColors(numSquares);
 var h1 = document.querySelector("h1")
 var squares = document.querySelectorAll(".square")
@@ -20,12 +20,7 @@ for (let i = 0; i < modeButtons.length; i++) {
     modeButtons[0].classList.remove("selected")
     modeButtons[1].classList.remove("selected")
     this.classList.add("selected");
-    if (this.textContent === "Easy") {
-      console.log("I am here");
-      numSquares = 3
-    } else {
-      numSquares = 6
-    }
+    this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
     reset();
   })
 }
@@ -38,7 +33,7 @@ function reset() {
   // change the color Display
   colorDisplay.textContent = pickedColor;
   messageDisplay.textContent = "";
-  this.textContent = "New Colors"
+  resetButton.textContent = "New Colors"
   // fill all the squares with colors
   for (var i = 0; i < squares.length; i++) {
     if (colors[i]) {
@@ -92,19 +87,7 @@ function reset() {
 // })
 
 resetButton.addEventListener("click", function() {
-  // generate random colors
-  colors = generateRandomColors(numSquares)
-  // pick a color to guess
-  pickedColor = pickColor();
-  // change the color Display
-  colorDisplay.textContent = pickedColor;
-  messageDisplay.textContent = "";
-  this.textContent = "New Colors"
-  // fill all the squares with colors
-  for (var i = 0; i < squares.length; i++) {
-    squares[i].style.backgroundColor = colors[i]
-  }
-  h1.style.backgroundColor = "steelblue"
+  reset();
 })
 
 // A loop to change the squares design.
