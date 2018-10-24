@@ -45,46 +45,6 @@ function reset() {
   }
   h1.style.backgroundColor = "steelblue"
 }
-// easyBtn.addEventListener("click", function() {
-//   // show that easy mode is selected
-//   hardBtn.classList.remove("selected")
-//   easyBtn.classList.add("selected")
-//   // generate only three colors
-//   numSquares = 3
-//   colors = generateRandomColors(numSquares)
-//   // pick a new color
-//   pickedColor = pickColor();
-//   // update the color display the match the new color
-//   colorDisplay.textContent = pickedColor
-//   // show only three colors
-//   for (var i = 0; i < squares.length; i++) {
-//     if (colors[i]) {
-//       squares[i].style.backgroundColor = colors[i]
-//     } else {
-//       // hide the rest of the colors
-//       squares[i].style.display = "none"
-//     }
-//   }
-// })
-//
-// hardBtn.addEventListener("click", function() {
-//   // show that the hard mode is selected
-//   hardBtn.classList.add("selected")
-//   easyBtn.classList.remove("selected")
-//   // generate only three colors
-//   numSquares = 6
-//   colors = generateRandomColors(numSquares)
-//   // pick a new color
-//   pickedColor = pickColor();
-//   // update the color display the match the new color
-//   colorDisplay.textContent = pickedColor
-//   // show only three colors
-//   for (var i = 0; i < squares.length; i++) {
-//     squares[i].style.backgroundColor = colors[i]
-//     // show all the colors
-//     squares[i].style.display = "block"
-//   }
-// })
 
 resetButton.addEventListener("click", function() {
   reset();
