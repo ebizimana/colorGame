@@ -1,0 +1,24 @@
+{
+  "name": "colorgame",
+  "version": "1.0.0",
+  "description": "The best rgba color game ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebizimana/colorGame.git"
+  },
+  "author": "Elie Bizimana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ebizimana/colorGame/issues"
+  },
+  "homepage": "https://github.com/ebizimana/colorGame#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
